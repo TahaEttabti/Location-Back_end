@@ -1,0 +1,59 @@
+[
+  {
+    "ID":1,
+    "image":"g1.jpg",
+    "Name":"Dacia Sandero",
+    "Description":"Le véhicule coupé de Dacia, très pratique en ville comme pour vos long trajet avec toute les options pour un confort assuré.",
+    "Prix":"A partir de 300 Dhs par jours"
+  },
+  {
+    "ID":2,
+    "image":"g2.jpg",
+    "Name":"Renault Clio 4",
+    "Description":"Nouveau design, spacieuse vehicule avec gps tactile, climatisé faites vous plaisir avec la nouvelle citadine de Renault.",
+    "Prix":"A partir de 350 Dhs par jours"
+  },
+  {
+    "ID":3,
+    "image":"g3.jpg",
+    "Name":"Fiat panda",
+    "Description":"La voiture citadine et souple qui passe partout. Petite mais pratique, elle a tous les atouts d’une grande.",
+    "Prix":"A partir de 250 Dhs par jours"
+  },
+  {
+    "ID":4,
+    "image":"g4.jpg",
+    "Name":"Citroën C3",
+    "Description":"Ce véhicule de nouvelle génération, vous apportera confort et souplesse lors de tous vos déplacements, sans oublier son grand coffre pratique.",
+    "Prix":"A partir de 350 Dhs par jours"
+  },
+  {
+    "ID":5,
+    "image":"g5.jpg",
+    "Name":"Dacia Lodgy",
+    "Description":"Toute nouvelle dans notre flotte, la Dacia Lodgy 7 places, toutes options, le top pour des vacances en famille ou en groupe.",
+    "Prix":"A partir de 350 Dhs par jours"
+  },
+  {
+    "ID":6,
+    "image":"g6.jpg",
+    "Name":"Dacia Logan",
+    "Description":"Logan dacia diesel, spacieuse, confortable et economique pour vos voyages en famille en toute sécurité.",
+    "Prix":"A partir de 300 Dhs par jours"
+  },
+  {
+    "ID":7,
+    "image":"g7.jpg",
+    "Name":"Dacia Logan",
+    "Description":"Modèle Diesel. Un véhicule spacieux et économique Location climatisé pour un séjour en toute sérénité au Maroc",
+    "Prix":"A partir de 250 Dhs par jours"
+  },
+  {
+    "ID":8,
+    "image":"g8.jpg",
+    "Name":"Hyundai H1",
+    "Description":"La Hyundai H1 présente un grand hayon,la rampe de chargement peut facilement se ranger dans l’espace de chargement.",
+    "Prix":"A partir de 840 Dhs par jours"
+  }
+
+]

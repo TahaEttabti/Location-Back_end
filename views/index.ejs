@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>  
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="js/js-slide & form/slider.js"></script>
+
+    <title>Location</title>
+</head>
+<body>
+ <header class="header">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">
+        <img src="image/logo.png" id="img">
+      </label>
+      <ul>
+        <li><a class="active" href="home">Home</a></li>
+        <li><a  href="inscription">Inscription</a></li>
+        <li><a  href="reservation">Réservation</a></li>
+      </ul>
+    </nav>
+    <img src="image/header.jpg" id="imge">
+      <h4>Bienvenue à Safi-Car</h4>
+      <h2>Une flotte de véhicules neufs pour votre sécurité</h2>
+</header>
+<!-- Slide Start -->
+<section class="sec1-slider">
+  <div id="slider">
+    <div class="text">
+    <h1>N'attendez pas le dernier jour pour réserver</h1>
+    <h3>Réserver à l'avance est le meilleur moyen de s'organiser et surtout d'économiser !</h3></div>
+    <img src="image/img1.jpg" alt=" " id="slide">
+        <div id="precedent" onclick="ChangeSlide(-1)"><</div>
+        <div id="suivant" onclick="ChangeSlide(1)">></div>
+  </div>
+</section>
+<!-- Slide End -->
+
+<!-- Gallery Start -->
+<section class="sec2">
+  <div class="">
+    <% for (i of array) { %>
+    <div class="gallery">
+         <img src="image/<%= i.image %>" alt="" width="600" height="400">
+       <div class="desc"> 
+         <h3><%= i.Name %></h3><br>
+         <p><%= i.Description %></p><br>
+         <span class="cost"><%= i.Prix %></span>
+       </div>
+        <a class="btn" href="reservation">Réservez Maintenant</a>
+       </div> 
+    <% } %>
+  </div>
+</section>
+
+<section class="sec3">
+<div class="nous">
+    <h1 id="h1">A Propos de Nous :</h1><br>
+    <p id="p">Nous sommes une agence réceptive pour les groupes et individuels<br>
+      une équipe jeune, dynamique dotée d'une grande expérience professionnelle.<br>
+      Safi-Car est l'agence qui vous fournit les services de la location de voitures sur tout le Maroc.</p>
+</div>    
+</section>
+<footer class="footer">
+  <div class="contain">
+  <div class="con">
+    <h1>Menu</h1>
+      <i>Home</i>
+      <i>Inscription</i>
+      <i>Résérvation</i>
+  </div>
+  <div class="con">
+    <h1>Contact</h1>
+      <i>Phone:  +212 (0)6 55 44 33 22</i>
+      <i>Email: safi-car@gmail.com</i>
+  </div>
+  <div class="con social">
+    <h1>Social</h1>
+      <i><img src="https://img.icons8.com/color/52/000000/twitter.png" style="width: 100%;"></i>
+      <i><img src="https://img.icons8.com/color/52/000000/instagram.png" style="width: 100%;"></i>
+      <i><img src="https://img.icons8.com/color/52/000000/facebook.png" style="width: 100%;"></i>
+  </div>
+</div>
+</footer>
+</body>
+</html> 

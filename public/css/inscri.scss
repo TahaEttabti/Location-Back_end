@@ -1,0 +1,285 @@
+//inscription//
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+    background-image: url(https://i.gaw.to/content/photos/33/47/334751_2019_Rolls-Royce_Cullinan.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .header {
+    #imge {
+      flex-basis: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 700px;
+      opacity: 0.4;
+    }
+  }
+  #img {
+    height: 80%;
+    padding: 0 65px;
+    margin-top: 10px;
+  }
+  nav {
+    background: #2f4454;
+    height: 80px;
+    width: 100%;
+    ul {
+      float: right;
+      margin-right: 20px;
+      li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+        a {
+          color: white;
+          font-size: 17px;
+          padding: 7px 13px;
+          border-radius: 3px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  a.active {
+    background: brown;
+    transition: .5s;
+  }
+  a {
+    &:hover {
+      background: brown;
+      transition: .5s;
+    }
+  }
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
+  h4 {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    bottom: 10em;
+    text-align: center;
+    font-style: italic;
+    text-decoration: light;
+    font-family: tah;
+  }
+  h2 {
+    color: white;
+    position: relative;
+    bottom: 9em;
+    text-align: center;
+    font-style: italic;
+    font-family: tah;
+    font-size: 40px;
+    font-weight: 100;
+  }
+ @media (max-width: 952px){
+ 
+   #img {
+      padding-left: 35px;
+    } 
+    .header #imge{
+      height: 230px;
+   }
+   nav ul li a{
+     font-size: 16px;
+   }
+   h4, h2 {
+    font-size: 20px;
+    bottom: 150px;
+ }
+ }
+ @media (max-width: 858px){
+  body {
+    background-position: right;
+  } 
+   .checkbtn{
+     display: block;
+   }
+   ul{
+     position: fixed;
+     width: 100%;
+     height: 320px;
+     background: #2f4454;
+     top: 80px;
+     left: -100%;
+     text-align: center;
+     transition: all .5s;
+     z-index: 1;
+   }
+   nav ul li{
+     display: block;
+     margin: 50px 0;
+     line-height: 30px;
+   }
+   nav ul li a{
+     font-size: 20px;
+   }
+   a:hover,a.active{
+     background: none;
+     color: blanchedalmond;
+   }
+   #check:checked ~ ul{
+     left: 0;
+   }
+ }
+
+h1#insc {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  font-size: 58px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 70px;
+}
+span {
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+}
+input {
+  display: flex;
+  height: 40px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 30px;
+}
+select#genre {
+  display: flex;
+  height: 40px;
+  width: 25%;
+}
+#mot {
+  margin-bottom: 25px;
+}
+select {
+  display: flex;
+  margin-bottom: 26px;
+  height: 40px;
+  width: 50%;
+}
+input#Soumettre {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 75px;
+  background-color: #2f4454;
+  color: white;
+  border: 0px;
+  border-radius: 13em;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media(max-width: 858px){
+h1#insc {
+  font-size: 35px;
+}
+form {
+  width: 100%;
+}
+input#Soumettre {
+  background-color: #009688;
+}
+}
+
+/* STYLES SPECIFIC TO FOOTER  */
+.footer {
+  width: 100%;
+  position: relative;
+  height: 400px;
+  background-color: #2f4454;
+  margin-top: 8em;
+  display: block;
+}
+.footer .con {
+  width: 32%;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 0px 10px 265px;
+  display: block;
+}
+.footer .con h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 40px;
+  line-height: 17px;
+  padding: 85px 0px 5px 0px;
+  color: #00BCD4;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+.footer .con i {
+  color: #607D8B;
+  font-size: 25px;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  display: block;
+  padding: 10px 0px 10px 0px;
+}
+.con.social i {
+    padding: 15px 15px 0px 0px;
+    display: inline-block;
+}
+.social i {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 858px) {
+  .footer {
+    height: 720px;
+  }
+  .footer .col {
+    width: 33%;
+  }
+  .footer .con {
+    width: 100%;
+    padding: 0px 0px 10px 100px;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col i {
+    font-size: 13px;
+  }
+  .con.social i {
+    display: inline-block;
+  }
+}
