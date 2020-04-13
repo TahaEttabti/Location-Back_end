@@ -5,18 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-   <script src="js/js-slide & form/edit.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link scr="css/edit.css">
 </head>
 <body>
 	<div class="container">
 		<h1>Edit</h1>
-    <% for (i of reserve) { %>
-    
-    <% } %>
+<% for (i of reserve) { %>
+    <% if (i.ID == editID) { %>
 		<form action="/edit" method="POST">
 			<div class="form-group">
-            <input type="text" id="vv" name="ID" value="" >
+            <input type="text" id="edit" name="ID" value="<%= editID %>" >
 				<label for="Nom">Nom</label>
 				<input 
 					class="form-control" 
@@ -26,7 +25,7 @@
                     maxlength="20" 
                     autocomplete="off" 
                     required aria-required="true"
-					value="<%= i.Name %>"
+                     value="<%= i.Name %>"
 				/>
 			</div>
             <div class="form-group">
@@ -39,7 +38,7 @@
                     maxlength="20" 
                     autocomplete="off" 
                     required aria-required="true"
-                    value="<%= i.Prenom %>"
+                     value="<%= i.Prenom %>"
                 />    
             </div>
             <div class="form-group">
@@ -59,7 +58,7 @@
                 <label for="Phone">N° Téléphone :</label>
                 <input
                     class="form-control" 
-                    type = "number" 
+                    type = "text" 
                     id="telephone" 
                     name ="Phone" 
                     maxlength="10" 
@@ -71,17 +70,17 @@
 			<div class="form-group">
 				<label for="cars">Cars</label>
 				<select id="cars" class="form-control" name="cars">
-                    <option value="Dacia Sandero" <%= i.cars == "Dacia Sandero" ? "selected" : "" %>>Dacia Sandero</option>
-					<option value="Renault Clio 4" <%= i.cars == "Renault Clio 4" ? "selected" : "" %>>Renault Clio 4</option>
-					<option value="Fiat Panda" <%= i.cars == "Fiat Panda" ? "selected" : "" %>>Fiat panda</option>
-					<option value="Citroën C3" <%= i.cars == "Citroën C3" ? "selected" : "" %>>Citroën C3</option>
-                    <option value="Dacia Lodgy" <%= i.cars == "Dacia Lodgy" ? "selected" : "" %>>Dacia Lodgy</option>
-                    <option value="Dacia Logan" <%= i.cars == "Dacia Logan" ? "selected" : "" %>>Dacia Logan</option>
-                    <option value="Hyundai H1" <%= i.cars == "Hyundai H1" ? "selected" : "" %>>Hyundai H1</option>
+                    <option value="Dacia Sandero">Dacia Sandero</option>
+					<option value="Renault Clio 4">Renault Clio 4</option>
+					<option value="Fiat Panda">Fiat panda</option>
+					<option value="Citroën C3">Citroën C3</option>
+                    <option value="Dacia Lodgy">Dacia Lodgy</option>
+                    <option value="Dacia Logan">Dacia Logan</option>
+                    <option value="Hyundai H1">Hyundai H1</option>
 				</select>
 			</div>
             <div class="form-group">
-                <label for="DateReservationFin">Date de Départ de Résérvation :</label>
+                <label for="DateReservation">Date de Départ de Résérvation :</label>
                 <input
                     class="form-control" 
                     type = "date" 
@@ -106,20 +105,19 @@
                     value="<%= i.DateReservationFin %>"
                 />    
             </div>
-			<button type="submit" class="btn btn-info" onclick="get(this)" name="<%= i.ID %>">Save</button>
-            
+			<button type="submit" class="btn btn-info">Save</button>
+            <% } %>
+            <% } %>
 		</form >
 	</div>
 
 <script>
-      var cc = document.getElementById("vv");
-           function get(ev) {
-	    let bn = ev.name;
-	    console.log(bn);
-           
-            cc.value = bn;
-           
-      }
+      var element = document.getElementById("edit");
+        function get(event) {
+	        var mdf = event.name;
+	        console.log(mdf);
+            mdf.value = mdf; 
+        }
 </script>
 
 </body>

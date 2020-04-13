@@ -30,7 +30,8 @@ app.get('/reservation', (req, res) => {
 });
 
 app.get('/edit/:ID', (req, res) => {
-  res.render('edit', {reserve})
+  let editID = req.params.ID
+  res.render('edit', {reserve, editID})
 });
 
 // Partie Inscription //
@@ -117,7 +118,7 @@ app.post('/edit', (req, res) => {
 
 
 app.get('/delete/:ID', (req, res) => {
-  reserve = reserve.filter(element => element.ID != req.params.ID);
+  reserve = reserve.filter(el => el.ID != req.params.ID);
 
   // saving data
   const data = JSON.stringify(reserve, null, 2);

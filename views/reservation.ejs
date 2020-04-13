@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reservation.css"/>  
+    <link rel="stylesheet" href="js/js-template/reserv.js"/>  
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <title>Reservation</title>
 </head>
@@ -38,7 +34,7 @@
   <span> Nom :</span><input type = "text" id="nom" name ="Name"  placeholder="Entrez votre Nom" size="22" maxlength="20" autocomplete="off" required aria-required="true" />
   <span> Prenom :</span><input type = "text" id="prenom" name ="Prenom"   placeholder="Entrez votre Prenom" size="22" maxlength="20" autocomplete="off" required aria-required="true" />
   <span> E-mail :</span><input type = "text" id="email" name ="Email"   placeholder="Entrez votre Email" size="22" maxlength="25" autocomplete="off" required aria-required="true"/>
-  <span> N° Téléphone :</span><input type = "number" id="telephone" name ="Phone"   placeholder="Entrez votre phone" size="22" maxlength="10" autocomplete="off" required aria-required="true"/>
+  <span> N° Téléphone :</span><input type = "text" id="telephone" name ="Phone"   placeholder="Entrez votre phone" size="22" maxlength="10" autocomplete="off" required aria-required="true"/>
   </div>
   <div class="L2">
   <span> Genre de voiture :</span>
@@ -113,14 +109,12 @@
 </footer>
 
 <script>
-      var cc = document.getElementById("vv");
-           function get(ev) {
-	    let bn = ev.name;
-	    console.log(bn);
-           
-            cc.value = bn;
-           
-      }
+      var element = document.getElementById("edit");
+        function get(event) {
+	        var mdf = event.name;
+	        console.log(mdf);
+            mdf.value = mdf; 
+        }
 </script>
 
 </body>
