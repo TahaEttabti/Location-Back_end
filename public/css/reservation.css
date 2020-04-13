@@ -165,6 +165,7 @@ h1#resev {
   font-size: 40px;
   font-style: oblique;
   font-family: initial;
+  margin-left: 10em;
 }
 
 form.inputM {
@@ -244,19 +245,19 @@ button#Soumettre {
 
 table, th, td {
   color: white;
-  border: 1px solid rgb(255, 255, 255);
+  border: 0px solid rgb(255, 255, 255);
   border-collapse: collapse;
   line-height: 50px;
-  background-color: #00000059;
+  background-color: #00000061;
   text-align: center;
-  margin-left: 10em;
+  margin-left: 14em;
   padding: 12px;
   margin-top: 4em;
 }
 td {
   color: wheat;
 }
-#button {
+.button {
   color: white;
   text-decoration: none;
 }

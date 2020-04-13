@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <script src="js/js-slide & form/edit.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Edit</h1>
+    <% for (i of reserve) { %>
+    
+    <% } %>
+		<form action="/edit" method="POST">
+			<div class="form-group">
+            <input type="text" id="vv" name="ID" value="" >
+				<label for="Nom">Nom</label>
+				<input 
+					class="form-control" 
+                    type = "text" 
+                    id="nom" 
+                    name ="Name"  
+                    maxlength="20" 
+                    autocomplete="off" 
+                    required aria-required="true"
+					value="<%= i.Name %>"
+				/>
+			</div>
+            <div class="form-group">
+                <label for="Prenom">Prenom</label>
+                <input
+                    class="form-control" 
+                    type = "text" 
+                    id="prenom" 
+                    name ="Prenom"
+                    maxlength="20" 
+                    autocomplete="off" 
+                    required aria-required="true"
+                    value="<%= i.Prenom %>"
+                />    
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input
+                    class="form-control" 
+                    type = "text" 
+                    id="email" 
+                    name ="Email"
+                    maxlength="20" 
+                    autocomplete="off" 
+                    required aria-required="true"
+                    value="<%= i.Email %>"
+                />    
+            </div>
+            <div class="form-group">
+                <label for="Phone">N° Téléphone :</label>
+                <input
+                    class="form-control" 
+                    type = "number" 
+                    id="telephone" 
+                    name ="Phone" 
+                    maxlength="10" 
+                    autocomplete="off" 
+                    required aria-required="true"
+                    value="<%= i.Phone %>"
+                />    
+            </div>
+			<div class="form-group">
+				<label for="cars">Cars</label>
+				<select id="cars" class="form-control" name="cars">
+                    <option value="Dacia Sandero" <%= i.cars == "Dacia Sandero" ? "selected" : "" %>>Dacia Sandero</option>
+					<option value="Renault Clio 4" <%= i.cars == "Renault Clio 4" ? "selected" : "" %>>Renault Clio 4</option>
+					<option value="Fiat Panda" <%= i.cars == "Fiat Panda" ? "selected" : "" %>>Fiat panda</option>
+					<option value="Citroën C3" <%= i.cars == "Citroën C3" ? "selected" : "" %>>Citroën C3</option>
+                    <option value="Dacia Lodgy" <%= i.cars == "Dacia Lodgy" ? "selected" : "" %>>Dacia Lodgy</option>
+                    <option value="Dacia Logan" <%= i.cars == "Dacia Logan" ? "selected" : "" %>>Dacia Logan</option>
+                    <option value="Hyundai H1" <%= i.cars == "Hyundai H1" ? "selected" : "" %>>Hyundai H1</option>
+				</select>
+			</div>
+            <div class="form-group">
+                <label for="DateReservationFin">Date de Départ de Résérvation :</label>
+                <input
+                    class="form-control" 
+                    type = "date" 
+                    id= "dateDebut" 
+                    name ="DateReservation" 
+                    min="02-06-1998"
+                    max="02-06-2050" 
+                    required
+                    value="<%= i.DateReservation %>"
+                />    
+            </div>
+            <div class="form-group">
+                <label for="DateReservationFin">Date de Fin de Résérvation :</label>
+                <input
+                    class="form-control" 
+                    type = "date" 
+                    id= "dateFin" 
+                    name ="DateReservationFin" 
+                    min="02-06-1998"
+                    max="02-06-2050" 
+                    required
+                    value="<%= i.DateReservationFin %>"
+                />    
+            </div>
+			<button type="submit" class="btn btn-info" onclick="get(this)" name="<%= i.ID %>">Save</button>
+            
+		</form >
+	</div>
+
+<script>
+      var cc = document.getElementById("vv");
+           function get(ev) {
+	    let bn = ev.name;
+	    console.log(bn);
+           
+            cc.value = bn;
+           
+      }
+</script>
+
+</body>
+</html>
+
+ 
