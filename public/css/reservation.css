@@ -256,7 +256,7 @@ table, th, td {
 td {
   color: wheat;
 }
-.button {
+a#button {
   color: white;
   text-decoration: none;
 }
