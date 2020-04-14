@@ -4,18 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>Edit</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link scr="css/edit.css">
+    
 </head>
-<body>
-	<div class="container">
+<body style="color:white; background-image: url(https://www.ecopetit.cat/wpic/mpic/269-2691445_background-gta-5-voiture.jpg); background-size: cover;">
+ 
+	<div class="container" style="margin-top: 8em; font-size: 20px; font-weight: 900;">
 		<h1>Edit</h1>
 <% for (i of reserve) { %>
     <% if (i.ID == editID) { %>
 		<form action="/edit" method="POST">
 			<div class="form-group">
-            <input type="text" id="edit" name="ID" value="<%= editID %>" >
+            <input type="text" id="edit" name="ID" size="1" value="<%= editID %>" required><br>
 				<label for="Nom">Nom</label>
 				<input 
 					class="form-control" 
@@ -24,8 +25,8 @@
                     name ="Name"  
                     maxlength="20" 
                     autocomplete="off" 
-                    required aria-required="true"
-                     value="<%= i.Name %>"
+                    required
+                    value="<%= i.Name %>"
 				/>
 			</div>
             <div class="form-group">
@@ -37,8 +38,8 @@
                     name ="Prenom"
                     maxlength="20" 
                     autocomplete="off" 
-                    required aria-required="true"
-                     value="<%= i.Prenom %>"
+                    required
+                    value="<%= i.Prenom %>"
                 />    
             </div>
             <div class="form-group">
@@ -50,7 +51,7 @@
                     name ="Email"
                     maxlength="20" 
                     autocomplete="off" 
-                    required aria-required="true"
+                    required
                     value="<%= i.Email %>"
                 />    
             </div>
@@ -63,7 +64,7 @@
                     name ="Phone" 
                     maxlength="10" 
                     autocomplete="off" 
-                    required aria-required="true"
+                    required 
                     value="<%= i.Phone %>"
                 />    
             </div>

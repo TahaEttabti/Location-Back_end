@@ -8,7 +8,6 @@ function validation() {
     let Dd = document.getElementById('dateDebut');
     let Df = document.getElementById('dateFin');
     let P =document.getElementById('dateP');
-    let affich = document.getElementById('affichage');
 
     {
       Ca.options[Ca.selectedIndex].text;
@@ -16,8 +15,7 @@ function validation() {
     if ((Anom(N)) && (Aprenom (Pe)) && (Aemail(E)) && (Atele(T)) && (DateR()) && (P.value.length > 0) && (Dd.value.length > 0) && (Df.value.length > 0)&& (Apermis())) {
 
       alert("Validé");
-      affich.style.display="block";
-      affich.innerHTML="Votre Nom : " + N.value.fontcolor("white")+ "<br>"  + "Votre Prenom : " + Pe.value.fontcolor("white") + "<br>" + "Votre Email : " + E.value.fontcolor("white") + "<br>" + "Votre Telephone : "  + T.value.fontcolor("white") + "<br>"  + "La Date de départ : " + Dd.value.fontcolor("white") +  "<br>"  + "La Date de Fin : " + Df.value.fontcolor("white") + "<br>"+ "Votre produit : " + Ca.value.fontcolor("white");     
+
       } 
     } return false; 
   }
@@ -41,10 +39,9 @@ function validation() {
   }
     
   function Aemail() {
-        let emailID = document.myForm.Email.value;
+        let emailID = document.reserv.Email.value;
               at = emailID.indexOf("@");
               dot = emailID.lastIndexOf(".");
-             
               if (at < 1 || ( dot - at < 2 )) {
                  alert("Entrez votre E-mail S'il vous plais")
                 document.reserv.Email.focus() ;
